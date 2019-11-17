@@ -1,0 +1,59 @@
+.bh-spain2 {
+	background-image: url('../img/bg-spain2.jpg');
+	background-size: cover;
+	width: 100%;
+	height: 100vh;
+
+	&__wrapper {
+	display: flex;
+	padding-bottom: 30px;
+	align-items: flex-end;
+	min-height: 100vh;
+
+	@include md-screen {
+		padding-bottom: 50px;
+		}
+
+	@include lg-screen {
+		padding-bottom: 100px;
+		}
+	}
+
+	&__inner {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: flex-start;
+	max-width: 100%;
+	background-color: rgba($grey-but-more-grey, .7);
+	min-height: 370px;
+	padding: 50px 30px;
+
+	@include md-screen {
+		max-width: 50%;
+		}
+	}
+
+	&__title {
+		font-size: $card-title;
+		letter-spacing: 2px;
+		line-height: 26px;
+		text-transform: capitalize;
+	}
+
+	&__subtitle {
+		font-size: $card-title;
+		line-height: 26px;
+		text-transform: uppercase;
+	}
+
+	&__text {
+		font-size: $base-size;
+		line-height: 26px;
+		text-transform: none;
+	}
+}
+
+.left {
+	justify-content: flex-end;
+}
