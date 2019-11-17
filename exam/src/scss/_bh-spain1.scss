@@ -1,0 +1,109 @@
+.bh-spain1{
+	background-image: url('../img/bg-spain1.jpg');
+	background-size: cover;
+  	height: 100vh;
+
+	&__wrapper{
+	display: flex;
+	flex-direction:column;
+	justify-content:flex-end;
+	height: 100vh;
+	padding-bottom: 100px;
+	}
+
+   	&__box{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	max-width: 540px;
+	background-color: rgba($grey-but-more-grey,0.9);
+	height: 370px;
+	padding-left: 30px;
+	}
+
+	&__title{
+	font-size: $card-title;
+	letter-spacing: 2px;
+	font-family: $main-font;
+	text-transform: capitalize;
+	}
+
+	&__subtitle{
+	font-size:$card-title;
+	font-family: $main-font;
+	text-transform: uppercase;
+	}
+	&__text{
+	font-size:$base-size;
+	line-height: 26px;
+	font-family: $main-font;
+	}
+}
+
+@media only screen and (max-width: 320px){
+	.bh-spain1__wrapper{
+		justify-content: center;
+		padding: 0;
+	}
+	.bh-spain1__box{
+		align-items: center;
+		padding:0;
+		text-align: center;
+	}
+}
+
+@media only screen and (min-width: 321px) and (max-width: 767px) {
+	.bh-spain1__wrapper{
+		justify-content: center;
+		padding: 0;
+	}
+	.bh-spain1__box{
+		align-items: center;
+		padding: 0;
+	}
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+	.bh-spain1__wrapper{
+		justify-content: center;
+		padding: 0;
+	}
+	.bh-spain1__box{
+		align-items: center;
+	}
+}
+
+.gradient-btn {
+    display: flex;
+    width: 225px;
+    height: 60px;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    font-family: $secondary-font;
+    color: $white;
+    text-decoration: none;
+    background-color: $gradient-right-color;
+    position: relative;
+    overflow: hidden;
+    &::before {
+        content: "";
+        display: block;
+        width: 160%;
+        height: 430%;
+        position: absolute;
+        background-color: $gradient-left-color;
+        left: -120%;
+        transform: rotate(45deg);
+        transition: all .5s ease;
+        z-index: 0;
+    }
+    &:hover {
+        &::before {
+            left: -30px;
+        }
+    }
+    &__text {
+        position: relative;
+        z-index: 1;
+    }
+}
