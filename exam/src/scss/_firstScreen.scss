@@ -62,6 +62,7 @@
 		letter-spacing: 3px;
 		padding: 0 15px;
 		border: 2px solid $white;
+		cursor: pointer;
 	}
 
 	& .zoom {
@@ -71,11 +72,6 @@
 	}
 
 	&__scroll {
-		color: $white;
-		font-family: $main-font;
-		text-transform: capitalize;
-		letter-spacing: 2px;
-		font-size: .8rem;
 		padding: 15px;
 		position: relative;
 
@@ -91,6 +87,15 @@
 			transform: rotate(45deg);
 			left: 50%; margin-left: -5px;
 			top: calc(50% + 15px);
+		}
+
+		.first-screen__ancor {
+			text-decoration: none;
+			font-size: .8rem;
+			letter-spacing: 2px;
+			color: $white;
+			font-family: $main-font;
+			text-transform: capitalize;
 		}
 	}
 }
