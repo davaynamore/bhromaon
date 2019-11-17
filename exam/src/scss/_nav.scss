@@ -1,0 +1,160 @@
+.navigation {
+
+	background-color: $blue;
+	position: relative;
+
+	&__btn-outter {
+		position: absolute;
+		top: 10px;
+		right: 10px;
+		height: 30px;
+		width: 40px;
+		transition: all .3s;
+
+		@media screen and (min-width: 781px) {
+			visibility: hidden;
+		}
+
+		&::before {
+			content: " ";
+			height: 3px;
+			background-color: $white;
+			width: 100%;
+			position: absolute;
+			top: 0;
+			transition: all .3s;
+		}
+		&::after {
+			content: " ";
+			height: 3px;
+			background-color: $white;
+			width: 100%;
+			position: absolute;
+			bottom: 0;
+			transition: all .3s;
+		}
+	}
+
+	&__btn-inner {
+		&::before {
+			content: " ";
+			height: 3px;
+			background-color: $white;
+			width: 100%;
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+	}
+
+	&__wrapper {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		height: 80px;
+		width: 100%;
+		overflow: hidden;
+		transition: all .3s;
+
+		@media screen and (max-width: 780px) {
+			flex-direction: column;
+			align-items: flex-start;
+			height: 60px;
+			padding-top: 20px;
+		}
+	}
+
+	&__menu {
+		display: flex;
+		width: 100%;
+		max-width: 540px;
+		justify-content: space-between;
+		transition: all .3s;
+
+		@media screen and (max-width: 780px) {
+			flex-direction: column;
+			padding: 20px;
+		}
+	}
+
+	&__item {
+		@media screen and (max-width: 780px) {
+			margin-bottom: 15px;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	&__title {
+		font-size: 24px;
+		font-family: $main-font;
+		text-transform: uppercase;
+		color: $white;
+	}
+
+	&__link {
+		text-decoration: none;
+		color: $white;
+		font-family: $secondary-font;
+		text-transform: uppercase;
+		position: relative;
+
+
+		&::after {
+			content: " ";
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			background-color: $white;
+			height: 1px;
+			width: 0;
+			transition: all .3s;
+		}
+
+		&:hover::after {
+			width: 100%;
+		}
+	}
+}
+
+.mobile-navigation {
+
+	&__icon::before {
+		content: " ";
+		position: absolute;
+		top: 50%;
+		width: 100%;
+		background-color: #fff;
+		height: 4px;
+		border-radius: 25px;
+		transform: rotate(-45deg);
+		transition: all .3s;
+	}
+
+	&__icon::after {
+		content: " ";
+		position: absolute;
+		top: 50%;
+		width: 100%;
+		background-color: #fff;
+		height: 4px;
+		border-radius: 25px;
+		transform: rotate(45deg);
+		transition: all .3s;
+	}
+
+	&__icon-inner::before {
+		opacity: 0;
+		transition: all .3s;
+	}
+
+	&__menu {
+		transition: all .3s;
+		height: 200px;
+	}
+
+}
+
+
