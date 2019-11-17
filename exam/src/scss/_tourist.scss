@@ -1,0 +1,132 @@
+.bh-tourist {
+	background: url("../img/travel.jpg") center no-repeat;
+	height: 100vh;
+	display: flex;
+	position: relative;
+
+	align-items: center;
+
+	&::before {
+		content: " ";
+		position:absolute;
+		top:0;
+		left:0;
+		right:0;
+		bottom:0;
+		background-color:rgba(0, 0, 0, 0.85);
+		z-index:1;
+	}
+
+	&__wapper {
+		z-index:2;
+		margin: 0 auto;
+	}
+
+	&__title {
+		font-family: $secondary-font;
+		font-size: $section-title;
+		color:$white;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-bottom: 30px;
+		@media screen and (min-width: 1200px) {
+			margin-bottom: 70px;
+		}
+	}
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		max-height: 284px;
+		// overflow: hidden;
+
+		@media screen and (min-width: 992px) {
+			flex-direction: row;
+		}
+
+
+		&-left {
+			@media screen and (min-width: 1200px)  {
+				max-width: 40%;
+			}
+			
+			&-img {
+				width: 100%;
+				// height: 287px;
+				@media screen and (max-width: 576px){
+display: none;
+				}
+			}
+		}
+
+		&-right {
+			max-width: 790px;
+			width: 100%;
+			padding: 25px 40px;
+			background-color: $brown;
+			// min-height: 287px;
+			color: $white;
+			font-family: $main-font;
+			display:flex;
+			flex-direction: column;
+
+			@media screen and (min-width: 1200px)  {
+				padding: 40px 60px;
+				max-width: 60%;
+			}
+
+			@media screen and (min-width: 992px) {
+
+			}
+		}
+
+		&-right-title {
+			text-transform: uppercase;
+			font-size: $base-size;
+			margin-bottom: 20px;
+			@media screen and (min-width: 1200px)  {
+				margin-bottom: 40px;
+				font-size: $card-title;
+			}
+		}
+
+		&-right-text {
+			font-size: $base-size;
+			line-height: 20px;
+
+			@media screen and (min-width: 1200px)  {
+				line-height: 26px;
+			}
+		}
+	}
+}
+
+.fas {
+	color:$blue;
+	margin-right: 10px;
+}
+
+
+@media screen and (min-width: 320px) {
+
+}
+
+@media screen and (min-width: 576px) {
+
+}
+
+@media screen and (min-width: 768px) {
+
+}
+
+@media screen and (min-width: 992px) {
+
+}
+
+
+
+
+
