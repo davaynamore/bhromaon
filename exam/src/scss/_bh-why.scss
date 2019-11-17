@@ -4,16 +4,47 @@
 	padding: 120px 0;
 	background: linear-gradient(rgba(0,0,0,.7) 100%), url(../img/bg-second.jpg) no-repeat;
 	background-size: cover;
+	@include xs-screen { padding: 60px 0; }
+	@include sm-screen { padding: 80px 0; }
+	@include md-screen { padding: 90px 0; }
 
 	&__flex-container {
 		display: flex;
 		height: 446px;
 		justify-content: space-between;
+		@include xs-screen { height: 565px; }
+		@include sm-screen { height: 525px; }
+		@include md-screen { height: 505px; }
 	}
 
 	&__flex-left {
 		width: 50%;
 		padding-top: 45px;
+
+		@include xs-screen {
+			display: flex;
+			flex-flow: column nowrap;
+			width: 100%;
+			padding-top: 0;
+			text-align: center;
+			justify-content: space-evenly;
+		}
+
+		@include sm-screen {
+			display: flex;
+			flex-flow: column nowrap;
+			width: 100%;
+			padding-top: 0;
+			text-align: center;
+			justify-content: space-evenly;
+		}
+
+		@include md-screen {
+			display: flex;
+			flex-flow: column nowrap;
+			padding-top: 0;
+			justify-content: space-evenly;
+		}
 	}
 
 	&__title {
@@ -21,6 +52,26 @@
 		margin-bottom: 58px;
 		font: px_to_rem(36px) $secondary-font;
 		color: $white;
+		@include xs-screen { margin-bottom: 0; }
+		@include sm-screen { margin-bottom: 0; }
+		@include md-screen { margin-bottom: 0; }
+
+	}
+
+	&__text-wrapper {
+		margin-bottom: 45px;
+
+		@include xs-screen {
+			margin-bottom: 0;
+			text-align: justify;
+		}
+
+		@include sm-screen {
+			margin-bottom: 0;
+			text-align: justify;
+		}
+
+		@include md-screen { margin-bottom: 0; }
 	}
 
 	&__text {
@@ -28,7 +79,8 @@
 		color: $white;
 		font-size: px_to_rem(16px);
 		line-height: 26px;
-		&:last-child { margin-bottom: 45px; }
+		&:last-child { margin-bottom: 0; }
+		@include xs-screen { margin-bottom: 20px; }
 	}
 
 	&__flex-right {
@@ -38,13 +90,14 @@
 		padding-left: 65px;
 		justify-content: space-between;
 		align-items: flex-start;
+		@include xs-screen { display: none; }
+		@include sm-screen { display: none; }
+		@include md-screen {
+			height: 450px;
+			padding-left: 3px;
+		}
 	}
 
-	&__image1 {
-		align-self: flex-start;
-	}
-
-	&__image2 {
-		align-self: flex-end;
-	}
+	&__image1 { align-self: flex-start;	}
+	&__image2 { align-self: flex-end; }
 }
