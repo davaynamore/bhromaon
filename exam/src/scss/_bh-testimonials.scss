@@ -1,0 +1,75 @@
+.bh-testimonial {
+	width: 100%;
+	background: url(../img/travel.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+	z-index: 2;
+	display: flex;
+	&::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		right: 0;
+		left: 0;
+		bottom: 0;
+		background-color: rgba($black, 0.8);
+		z-index: -1;
+	}
+}
+
+.bh-testimonial__inner {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding: 120px 0;
+	min-height: 100vh;
+}
+
+h3 {
+	display: flex;
+	justify-content: center;
+	font-family: $secondary-font;
+	font-size: $section-title;
+	color: $white;
+	text-transform: capitalize;
+	margin-bottom: 100px;
+}
+
+.bh-testimonial__block {
+	display: flex;
+	width: 1100px;
+	height: 285px;
+}
+
+h6 {
+	font-family: $main-font;
+	font-size: $card-title;
+	color: $white;
+	text-transform: uppercase;
+}
+
+.comments {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	padding: 60px;
+	width: 650px;
+	height: 285px;
+	font-family: $main-font;
+	font-size: $base-size;
+	color: $white;
+	background: $brown;
+}
+
+.quote {
+	padding-bottom: 10px;
+	fill: $blue;
+}
+.foto {
+	display: none;
+	@include lg-screen {
+		display: flex;
+	}
+}
