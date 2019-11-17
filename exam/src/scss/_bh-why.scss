@@ -1,0 +1,50 @@
+.bh-why {
+	display: flex;
+	height: 685px;
+	padding: 120px 0;
+	background: linear-gradient(rgba(0,0,0,.7) 100%), url(../img/bg-second.jpg) no-repeat;
+	background-size: cover;
+
+	&__flex-container {
+		display: flex;
+		height: 446px;
+		justify-content: space-between;
+	}
+
+	&__flex-left {
+		width: 50%;
+		padding-top: 45px;
+	}
+
+	&__title {
+		display: inline-block;
+		margin-bottom: 58px;
+		font: px_to_rem(36px) $secondary-font;
+		color: $white;
+	}
+
+	&__text {
+		margin-bottom: 35px;
+		color: $white;
+		font-size: px_to_rem(16px);
+		line-height: 26px;
+		&:last-child { margin-bottom: 45px; }
+	}
+
+	&__flex-right {
+		display: flex;
+		flex-flow: column nowrap;
+		width: 50%;
+		padding-left: 65px;
+		justify-content: space-between;
+		align-items: flex-start;
+	}
+
+	&__image1 {
+		align-self: flex-start;
+	}
+
+	&__image2 {
+		align-self: flex-end;
+	}
+}
