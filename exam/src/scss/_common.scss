@@ -5,49 +5,53 @@
 html, body {
 	min-height: 100vh;
 }
+body{
+	font-family: $main-font;
+    color: $white;
+    font-size: 100%;
+    background-color: $white;
+    border: 15px solid $white;
+}
 
-body {
-	display: flex;
-	justify-content: center;
-	align-items: center;
+.container{
+	width: 100%;
+	max-width: 1140px;
+	padding:0 15px;
+	margin:0 auto;
 }
 
 .gradient-btn {
-	display: flex;
-	width: 225px;
-	height: 60px;
-	justify-content: center;
-	align-items: center;
-	text-transform: uppercase;
-	font-family: $secondary-font;
-	color: $white;
-	text-decoration: none;
-	background-color: $gradient-right-color;
-	position: relative;
-	overflow: hidden;
-
-	&::before {
-		content: "";
-		display: block;
-		width: 160%; // 140%
-		height: 430%; // 430%
-		position: absolute;
-		background-color: $gradient-left-color;
-		left: -120%;
-		transform: rotate(45deg);
-		transition: all .5s ease;
-		z-index: 0;
-	}
-
-	&:hover {
-		&::before {
-			left: -30px;
-		}
-	}
-
-	&__text {
-		position: relative;
-		z-index: 1;
-	}
-
+    display: flex;
+    width: 225px;
+    height: 60px;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    font-family: $secondary-font;
+    color: $white;
+    text-decoration: none;
+    background-color: $gradient-right-color;
+    position: relative;
+    overflow: hidden;
+    &::before {
+        content: "";
+        display: block;
+        width: 160%;
+        height: 430%;
+        position: absolute;
+        background-color: $gradient-left-color;
+        left: -120%;
+        transform: rotate(45deg);
+        transition: all .5s ease;
+        z-index: 0;
+    }
+    &:hover {
+        &::before {
+            left: -30px;
+        }
+    }
+    &__text {
+        position: relative;
+        z-index: 1;
+    }
 }
