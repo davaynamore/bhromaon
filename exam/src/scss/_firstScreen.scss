@@ -28,11 +28,9 @@
 
 	&__subtitle {
 		color: $white;
-		font-size: 1.4rem;
 		font-family: $main-font;
 		text-transform: capitalize;
 		font-weight: 300;
-		letter-spacing: 5px;
 	}
 
 	&__form {
@@ -62,6 +60,15 @@
 		letter-spacing: 3px;
 		padding: 0 15px;
 		border: 2px solid $white;
+		cursor: pointer;
+
+		&:hover {
+			background-color: lighten($blue, 10%);
+		}
+
+		&:hover .zoom{
+			animation: shake .8s linear both;
+		}
 	}
 
 	& .zoom {
@@ -71,11 +78,6 @@
 	}
 
 	&__scroll {
-		color: $white;
-		font-family: $main-font;
-		text-transform: capitalize;
-		letter-spacing: 2px;
-		font-size: .8rem;
 		padding: 15px;
 		position: relative;
 
@@ -91,6 +93,15 @@
 			transform: rotate(45deg);
 			left: 50%; margin-left: -5px;
 			top: calc(50% + 15px);
+		}
+
+		.first-screen__ancor {
+			text-decoration: none;
+			font-size: .8rem;
+			letter-spacing: 2px;
+			color: $white;
+			font-family: $main-font;
+			text-transform: capitalize;
 		}
 	}
 }
@@ -147,7 +158,8 @@
 		}
 
 		&__subtitle {
-			font-size: 1.2rem;
+			font-size: 1.4rem;
+			letter-spacing: 5px;
 		}
 
 		&__form {
@@ -174,4 +186,22 @@
 			display: block;
 		}
 	}
+}
+
+@keyframes shake {
+	10%, 90% {
+    transform: translate3d(0, -1px, 0);
+  }
+
+  20%, 80% {
+    transform: translate3d(0, 2px, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(0, -4px, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(0, 4px, 0);
+  }
 }
