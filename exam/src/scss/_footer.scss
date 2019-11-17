@@ -1,0 +1,45 @@
+.main-footer {
+	background-color: #232323;
+
+	&__wrapper {
+		height: 270px;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: flex-end;
+		padding-bottom: 50px;
+	}
+
+	&__wrapper-title {
+		font-size: 24px;
+		font-family: $main-font;
+		text-transform: uppercase;
+		color: $white;
+		margin-bottom: 15px;
+	}
+
+	&__wrapper-subtitle {
+		font-size: 16px;
+		text-transform: capitalize;
+		font-family: $main-font;
+		color: $white;
+		margin-bottom: 30px;
+	}
+
+	&__wrapper-list {
+		display: flex;
+		width: 100%;
+		max-width: 165px;
+		justify-content: space-between;
+	}
+
+	&__wrapper-img {
+		height: 20px;
+	}
+
+	&__wrapper-link {
+		display: block;
+		font-size: 0;
+	}
+}
