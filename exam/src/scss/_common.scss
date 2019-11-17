@@ -1,53 +1,73 @@
-*, *::before, *::after {
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
 	box-sizing: border-box;
 }
 
 html, body {
 	min-height: 100vh;
+	@include media-hidden;
 }
 
 body {
-	display: flex;
-	justify-content: center;
-	align-items: center;
+	font: 100% $main-font;
+	border: 15px solid $white;
 }
 
-.gradient-btn {
-	display: flex;
-	width: 225px;
-	height: 60px;
-	justify-content: center;
-	align-items: center;
-	text-transform: uppercase;
-	font-family: $secondary-font;
-	color: $white;
-	text-decoration: none;
-	background-color: $gradient-right-color;
-	position: relative;
-	overflow: hidden;
 
-	&::before {
-		content: "";
-		display: block;
-		width: 160%; // 140%
-		height: 430%; // 430%
-		position: absolute;
-		background-color: $gradient-left-color;
-		left: -120%;
-		transform: rotate(45deg);
-		transition: all .5s ease;
-		z-index: 0;
-	}
+.t-upper { text-transform: uppercase; }
+.capitalize { text-transform: capitalize; }
+
+
+.container {
+	width: 100%;
+  max-width: 1140px;
+  margin: auto;
+  padding: 0 15px;
+}
+
+
+.gradient-btn {
+	font-size: 0;
+	display: flex;
+  width: 225px;
+  height: 60px;
+  justify-content: center;
+  align-items: center;
+  font-family: $secondary-font;
+  color: $white;
+  text-decoration: none;
+  background-color: $gradient-right-color;
+  position: relative;
+  overflow: hidden;
+  @include xs-screen { margin: 0 auto; }
+  @include sm-screen { margin: 0 auto; }
+
+  &::before {
+  	content: "";
+    display: block;
+    width: 160%;
+    height: 430%;
+    position: absolute;
+    background-color: $gradient-left-color;
+    left: -120%;
+    transform: rotate(45deg);
+    transition: all .5s ease;
+    z-index: 0;
+  }
 
 	&:hover {
+
 		&::before {
 			left: -30px;
 		}
 	}
 
 	&__text {
+		font-size: 1rem;
 		position: relative;
 		z-index: 1;
 	}
-
 }
