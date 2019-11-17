@@ -1,0 +1,177 @@
+.first-screen {
+	background: url('../img/bg-header.jpg') center/cover no-repeat;
+	height: calc(100vh - 15px);
+	display: flex;
+	align-items: center;
+
+	&__wrapper {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	&__text {
+		max-width: 315px;
+		text-align: center;
+		margin-bottom: 50px;
+	}
+
+	&__title {
+		color: $white;
+		font-size: 3rem;
+		text-transform: uppercase;
+		font-family: $main-font;
+		letter-spacing: 2px;
+		margin-bottom: 15px;
+		font-weight: bold;
+	}
+
+	&__subtitle {
+		color: $white;
+		font-size: 1.4rem;
+		font-family: $main-font;
+		text-transform: capitalize;
+		font-weight: 300;
+		letter-spacing: 5px;
+	}
+
+	&__form {
+		display: flex;
+	}
+
+	&__search {
+		padding: 15px 0 15px 125px;
+		min-width: 500px;
+		border: 2px solid $white;
+
+		&::placeholder {
+			color: #999;
+			letter-spacing: 2px;
+		}
+	}
+
+	&__button {
+		min-width: 150px;
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		color: $white;
+		font-family: $secondary-font;
+		text-transform: uppercase;
+		background-color: $blue;
+		letter-spacing: 3px;
+		padding: 0 15px;
+		border: 2px solid $white;
+	}
+
+	& .zoom {
+		width: 23px;
+		height: 23px;
+		fill: #fff;
+	}
+
+	&__scroll {
+		color: $white;
+		font-family: $main-font;
+		text-transform: capitalize;
+		letter-spacing: 2px;
+		font-size: .8rem;
+		padding: 15px;
+		position: relative;
+
+		&::before {
+			content: "";
+			display: block;
+			position: absolute;
+			width: 10px;
+			height: 10px;
+			border: 1px solid $white;
+			border-left: none;
+			border-top: none;
+			transform: rotate(45deg);
+			left: 50%; margin-left: -5px;
+			top: calc(50% + 15px);
+		}
+	}
+}
+
+@media screen and (min-width: 320px) {
+	.first-screen {
+		&__title {
+			font-size: 2rem;
+		}
+
+		&__subtitle {
+			font-size: .9rem;
+		}
+
+		&__form {
+			margin-bottom: 0;
+		}
+
+		&__search {
+			padding: 15px 5px;
+			min-width: 210px;
+			&::placeholder {
+				letter-spacing: 0;
+			}
+		}
+
+		&__button {
+			min-width: initial;
+		}
+
+		&__button  span {
+			display: none;
+		}
+
+		&__scroll {
+			display: none;
+		}
+
+	}
+}
+
+@media screen and (min-width: 500px) {
+	.first-screen {
+		&__search {
+			min-width: 400px;
+		}
+	}
+}
+
+@media screen and (min-width: 700px) {
+	.first-screen {
+		&__title {
+			font-size: 3rem;
+		}
+
+		&__subtitle {
+			font-size: 1.2rem;
+		}
+
+		&__form {
+			margin-bottom: 100px;
+		}
+
+		&__search {
+			padding: 15px 0 15px 125px;
+
+			&::placeholder {
+				letter-spacing: 2px;
+			}
+		}
+
+		&__button {
+			min-width: 150px;
+		}
+
+		&__button span {
+			display: inline;
+		}
+
+		&__scroll {
+			display: block;
+		}
+	}
+}
