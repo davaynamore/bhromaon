@@ -8,11 +8,17 @@ html, body {
 
 body {
 	display: flex;
-	justify-content: center;
-	align-items: center;
+	padding: 15px;
+	color: $white;
+	background-color: $white;
 }
-
-.gradient-btn {
+.container {
+    width: 100%;
+    max-width: 1140px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+/*.gradient-btn {
 	display: flex;
 	width: 225px;
 	height: 60px;
@@ -50,4 +56,4 @@ body {
 		z-index: 1;
 	}
 
-}
+}*/
